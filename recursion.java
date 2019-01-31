@@ -24,5 +24,6 @@ public class recursion{
   public static void main(String[] args){
     //System.out.println(squareRoot(100));
     //System.out.println(squareRoot(25));
+    System.out.println(fib(15));
   }
 }
