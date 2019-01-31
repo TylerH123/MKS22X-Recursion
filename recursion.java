@@ -10,16 +10,16 @@ public class recursion{
   public static double squareRoot(double n){
     return squareRoot(n,1);
   }
-  public static int fib(int n, int partial1, int partial2){
+  public static int fib(int n, int next, int current){
     if (n == 0){
-      return 0;
+      return current;
     }
     else{
-      return fib(n-1,partial+partial2,)
+      return fib(n-1,next+current,next);
     }
   }
   public static int fib(int n){
-    return fib(n,0,1);
+    return fib(n,1,0);
   }
   public static void main(String[] args){
     //System.out.println(squareRoot(100));
