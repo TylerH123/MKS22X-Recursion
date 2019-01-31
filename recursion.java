@@ -21,7 +21,7 @@ public class recursion{
     }
   }
   public static int fib(int n){
-    return fib(n,1,1);
+    return fib(n,1,0);
   }
   public static ArrayList<Integer> makeAllSums(int n, int g){
     ArrayList<Integer>L = new ArrayList<Integer>();
@@ -33,6 +33,6 @@ public class recursion{
   public static void main(String[] args){
     //System.out.println(squareRoot(100));
     //System.out.println(squareRoot(25));
-    //System.out.println(fib(15));
+    //System.out.println(fib(0));
   }
 }
