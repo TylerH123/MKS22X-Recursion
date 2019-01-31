@@ -24,8 +24,14 @@ public class recursion{
     return fib(n,1,0);
   }
   public static ArrayList<Integer> makeAllSums(int n, int g){
-    ArrayList<Integer>L = new ArrayList<Integer>();
-    return L;
+    ArrayList<Integer> L = new ArrayList<Integer>();
+    if (n == 0){
+      L.add(g);
+      return L;
+    }
+    else{
+      return makeAllSums(n-1,n);
+    }
   }
   public static ArrayList<Integer> makeAllSums(int n){
     return makeAllSums(n,0);
