@@ -30,7 +30,7 @@ public class recursion{
       return L;
     }
     else{
-      return makeAllSums(n-1,n);
+      return makeAllSums(n-1,g+n);
     }
   }
   public static ArrayList<Integer> makeAllSums(int n){
@@ -40,5 +40,6 @@ public class recursion{
     //System.out.println(squareRoot(100));
     //System.out.println(squareRoot(25));
     //System.out.println(fib(0));
+    System.out.println(makeAllSums(3).toString());
   }
 }
