@@ -46,6 +46,6 @@ public class recursion{
     //System.out.println(squareRoot(100));
     //System.out.println(squareRoot(25));
     //System.out.println(fib(0));
-    System.out.println(makeAllSums(3).toString());
+    System.out.println(makeAllSums(2).toString());
   }
 }
