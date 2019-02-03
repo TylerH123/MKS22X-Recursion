@@ -24,16 +24,14 @@ public class recursion{
     return fib(n,1,0);
   }
   public static boolean makeAllSums(int n, int g, ArrayList<Integer> L){
-    if (n == 0){
+    if (n < 0){
       return true;
     }
     if (makeAllSums(n-1,g+n,L)){
       L.add(g);
-      return true;
     }
     if (makeAllSums(n-1,g,L)){
       L.add(g);
-      return true;
     }
     return false;
   }
@@ -46,6 +44,6 @@ public class recursion{
     //System.out.println(squareRoot(100));
     //System.out.println(squareRoot(25));
     //System.out.println(fib(0));
-    System.out.println(makeAllSums(2).toString());
+    System.out.println(makeAllSums(3).toString());
   }
 }
