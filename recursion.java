@@ -23,20 +23,24 @@ public class recursion{
   public static int fib(int n){
     return fib(n,1,0);
   }
-  public static ArrayList<Integer> makeAllSums(int n, int g, int size){
-    ArrayList<Integer> L = new ArrayList<Integer>();
-    if (L.size() == Math.pow(2, size)){
-      return L;
-    }
+  public static boolean makeAllSums(int n, int g, ArrayList<Integer> L){
     if (n == 0){
+      return true;
+    }
+    if (makeAllSums(n-1,g+n,L)){
       L.add(g);
+      return true;
     }
-    else{
-      return makeAllSums(n-1,g+n,size);
+    if (makeAllSums(n-1,g,L)){
+      L.add(g);
+      return true;
     }
+    return false;
   }
   public static ArrayList<Integer> makeAllSums(int n){
-    return makeAllSums(n,0,n);
+    ArrayList<Integer> L = new ArrayList<Integer>();
+    makeAllSums(n,0,L);
+    return L;
   }
   public static void main(String[] args){
     //System.out.println(squareRoot(100));
