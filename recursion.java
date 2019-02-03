@@ -32,17 +32,11 @@ public class recursion{
       L.add(g);
     }
     else{
-      return makeAllSums(n-1,g+n);
-    }
-    if (n == 0){
-      L.add(g);
-    }
-    else{
-      return makeAllSums(n-1,g);
+      return makeAllSums(n-1,g+n,size);
     }
   }
   public static ArrayList<Integer> makeAllSums(int n){
-    return makeAllSums(n,0,n.size());
+    return makeAllSums(n,0,n);
   }
   public static void main(String[] args){
     //System.out.println(squareRoot(100));
