@@ -23,13 +23,13 @@ public class recursion{
   public static int fib(int n){
     return fib(n,1,0);
   }
-  public static boolean makeAllSums(int n, int g, ArrayList<Integer> L){
+  public static void makeAllSums(int n, int g, ArrayList<Integer> L){
     if (n == 0){
       L.add(g);
-      return true;
     }
     else{
-      return makeAllSums(n-1,g+n,L) && makeAllSums(n-1,g,L);
+      makeAllSums(n-1,g+n,L);
+      makeAllSums(n-1,g,L);
     }
   }
   public static ArrayList<Integer> makeAllSums(int n){
