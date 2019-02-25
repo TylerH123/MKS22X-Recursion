@@ -1,16 +1,16 @@
 import java.util.*;
 
 public class recursion{
-  public static double squareRoot(double n, double g){
+  public static double sqrt(double n, double g){
     if (Math.abs((n - g * g) / n * 100) <= 0.00001){
       return g;
     }
     else{
-      return squareRoot(n,(n / g + g) / 2);
+      return sqrt(n,(n / g + g) / 2);
     }
   }
-  public static double squareRoot(double n){
-    return squareRoot(n,1);
+  public static double sqrt(double n){
+    return sqrt(n,1);
   }
   public static int fib(int n, int next, int current){
     if (n == 0){
@@ -38,8 +38,8 @@ public class recursion{
     return L;
   }
   public static void main(String[] args){
-    //System.out.println(squareRoot(100));
-    //System.out.println(squareRoot(25));
+    //System.out.println(sqrt(100));
+    //System.out.println(sqrt(25));
     //System.out.println(fib(0));
     System.out.println(makeAllSums(3));
   }
